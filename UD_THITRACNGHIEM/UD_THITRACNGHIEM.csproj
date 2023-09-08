@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C46829DE-D943-4C9E-8C92-F973E56C99A7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UD_THITRACNGHIEM</RootNamespace>
+    <AssemblyName>UD_THITRACNGHIEM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\CauHoi_BLL.cs" />
+    <Compile Include="BLL\DapAn_BLL.cs" />
+    <Compile Include="BLL\MonThi_BLL.cs" />
+    <Compile Include="BLL\TaiKhoan_BLL.cs" />
+    <Compile Include="BLL\ThiSinh_BLL.cs" />
+    <Compile Include="DAL\CauHoi_DAL.cs" />
+    <Compile Include="DAL\Colorcs.cs" />
+    <Compile Include="DAL\DapAn_DAL.cs" />
+    <Compile Include="DAL\DataConnect.cs" />
+    <Compile Include="DAL\GiangVien_DAL.cs" />
+    <Compile Include="DAL\KyThi_DAL.cs" />
+    <Compile Include="DAL\MonThi_DAL.cs" />
+    <Compile Include="DAL\TaiKhoan_DAL.cs" />
+    <Compile Include="DAL\ThiSinh_DAL.cs" />
+    <Compile Include="DAL\UD_THITRACNGHIEM.cs">
+      <DependentUpon>UD_THITRACNGHIEM.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\UD_THITRACNGHIEM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UD_THITRACNGHIEM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\CauHoi_DapAn.cs" />
+    <Compile Include="DTO\CauHoi_DTO.cs" />
+    <Compile Include="DTO\DapAn_DTO.cs" />
+    <Compile Include="DTO\GiangVien_DTO.cs" />
+    <Compile Include="DTO\KyThi_DTO.cs" />
+    <Compile Include="DTO\MonThi_DTO.cs" />
+    <Compile Include="DTO\TaiKhoan_DTO.cs" />
+    <Compile Include="DTO\ThiSinh_DTO.cs" />
+    <Compile Include="GUI\LamBaiTTN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LamBaiTTN.Designer.cs">
+      <DependentUpon>LamBaiTTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QL_CAUHOI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QL_CAUHOI.Designer.cs">
+      <DependentUpon>QL_CAUHOI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QL_GIANGVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QL_GIANGVIEN.Designer.cs">
+      <DependentUpon>QL_GIANGVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QL_KETQUA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QL_KETQUA.Designer.cs">
+      <DependentUpon>QL_KETQUA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QL_KYTHI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QL_KYTHI.Designer.cs">
+      <DependentUpon>QL_KYTHI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QL_MONTHI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QL_MONTHI.Designer.cs">
+      <DependentUpon>QL_MONTHI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QL_TS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QL_TS.Designer.cs">
+      <DependentUpon>QL_TS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanLy.Designer.cs">
+      <DependentUpon>QuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThemTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThemTaiKhoan.Designer.cs">
+      <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongtinTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongtinTS.Designer.cs">
+      <DependentUpon>ThongtinTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\LamBaiTTN.resx">
+      <DependentUpon>LamBaiTTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QL_CAUHOI.resx">
+      <DependentUpon>QL_CAUHOI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QL_GIANGVIEN.resx">
+      <DependentUpon>QL_GIANGVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QL_KETQUA.resx">
+      <DependentUpon>QL_KETQUA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QL_KYTHI.resx">
+      <DependentUpon>QL_KYTHI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QL_MONTHI.resx">
+      <DependentUpon>QL_MONTHI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QL_TS.resx">
+      <DependentUpon>QL_TS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanLy.resx">
+      <DependentUpon>QuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThemTaiKhoan.resx">
+      <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongtinTS.resx">
+      <DependentUpon>ThongtinTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DAL\UD_THITRACNGHIEM.xsc">
+      <DependentUpon>UD_THITRACNGHIEM.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\UD_THITRACNGHIEM.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UD_THITRACNGHIEM.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAL\UD_THITRACNGHIEM.xss">
+      <DependentUpon>UD_THITRACNGHIEM.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DangNhap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-arrow-symbol-in-a-circle2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thêm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-hufi-inkythuatso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-hufi-inkythuatso.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-emergency-exit-exit-sign-emergency-evacuation-safety-emergency-exit-sign-angle-text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_login1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
